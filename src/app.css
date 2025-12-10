@@ -33,6 +33,9 @@
 
 .output-side {
     background-color: #dbdbdb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .inputs-div {
@@ -56,6 +59,20 @@
     border: none;
     font-size: 24px;
     width: 40%;
+    transition: 0.3s;
+}
+
+#uploadBtn:hover {
+    background-color: #00a0d4; 
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#uploadBtn:disabled {
+    background-color: #5a7783; 
+    color: #aebecd;
+    cursor: not-allowed; 
 }
 
 .hidden-input {
@@ -67,18 +84,60 @@
     z-index: -1;
 }
 
-.file-label {
-    background-color: #dbdbdb;
-    color: #007ea7;
+.disabled-label, .file-label {
     border-radius: 24px;
     padding: 16px;
     width: 40%;
     display: block;
     font-size: 24px;
+    transition: 0.3s;
+}
+
+.file-label {
+    background-color: #dbdbdb;
+    color: #007ea7;
+}
+
+.file-label:hover {
+    background-color: #cacaca; 
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.disabled-label {
+    background-color: #5a7783; 
+    color: #aebecd;
+    pointer-events: none;
+    cursor: not-allowed;
 }
 
 .custom-input-group {
     width: 100%; 
     display: flex;
     justify-content: center;
+}
+
+.imagePreview {
+    width: 700px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 24px;
+    border: #00171f solid 5px;
+}
+
+.result-card {
+    width: 700px;
+}
+
+.result-card > p {
+    padding: 16px;
+}
+
+.result-card > h2 {
+    padding: 16px;
+}
+
+.preview-card > h2 {
+    padding: 16px;
 }

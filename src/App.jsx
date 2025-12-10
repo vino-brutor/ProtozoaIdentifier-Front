@@ -82,13 +82,14 @@ function App() {
           <p>Send a protozoa image and click on the send button</p>
           <div className="custom-input-group">
             <input 
+              disabled={isLoading}
               type="file" 
               name="image" 
               id="imageInput" 
               onChange={handleFileChange} 
               className="hidden-input" 
             />    
-            <label htmlFor="imageInput" className="file-label">
+            <label htmlFor="imageInput" className={isLoading ? "disabled-label" : "file-label"}>
             {previewURL ? "Image selected" : "Select a image"} 
             </label>
           </div>
@@ -103,19 +104,19 @@ function App() {
           <p>This will take a few seconds</p>
         </div>
         ) : result ? (
-          <div className="result-card">            
-            <img
+          <div className="result-card">    
+            <h2>{result.prediction.className}</h2>        
+            <img className="imagePreview"
               src={previewURL}
               alt={"Preview of the image from the user"}
             />
-            <p>Protozoa: {result.prediction.className}</p>
-            <p>Confidence: {result.prediction.confidence}</p>
+            <p>Your protozoa is a <span style={{fontWeight: `bold`}}>{result.prediction.className}</span></p>
             <ConfidenceBar value={result.prediction.confidence} />
           </div>
         ) : previewURL ? (
           <div className="preview-card">
             <h2>Analysis Preview</h2>
-            <img
+            <img className="imagePreview"
               src={previewURL}
               alt={"Preview of the image from the user"}
             />

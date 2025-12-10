@@ -18,12 +18,12 @@ export const ConfidenceBar = ({ value }) => {
   return (
     <div className="confidenceBarContainer">
         <div className="textConfidenceBarContainer">
-            <span className="titleConfidence">Confiança da IA</span>
-            <span className="titlePercentage" style={{backgroundColor: `${color}`}}>{percentage}%</span>
+            <span className="titleConfidence">Confidence</span>
+            <span className="titlePercentage">{percentage}%</span>
         </div>
 
         <div className="borderBar">
-            <div className="confidenceBar" style={{width: `${percentage}%`, color: `${color}`}}>
+            <div className="confidenceBar" style={{width: `${percentage}%`, backgroundColor: `${color}`}}>
                 
             </div>
         </div>

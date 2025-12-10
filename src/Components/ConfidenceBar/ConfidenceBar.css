@@ -12,7 +12,8 @@
 }
 
 .confidenceBarContainer {
-    margin-top: 10px;
+    margin-top: 16px;
+    width: 700px;
 }
 
 .textConfidenceBarContainer {
@@ -21,11 +22,7 @@
     margin-bottom: 5px;
 }
 
-.titleConfidence {
+.titleConfidence, .titlePercentage {
     font-weight: bold;
-    color: #555;
 }
 
-.titlePercentage {
-    font-weight: bold;
-}
