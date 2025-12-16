@@ -16,7 +16,7 @@ function App() {
 
   const handleGoogleSucess = async (credentialResponse) => {
     try {
-      const res = await fetch("http://localhost:3000/api/google-login", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/google-login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -71,7 +71,7 @@ function App() {
       formData.append(`image`, selectedFile);
 
       //faz o envio para o back da imagem que temos
-      const rawResponse = await fetch("http://localhost:3000/api/upload", {
+      const rawResponse = await fetch(`${import.meta.env.VITE_API_URL}/api/upload`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`, // Bearer é o tipo de token que o backend usa
@@ -112,7 +112,7 @@ function App() {
 
   const handleMenuOpen = async () => {
     const rawResponse = await fetch(
-      "http://localhost:3000/api/prediction-historic",
+      `${import.meta.env.VITE_API_URL}/api/prediction-historic`,
       {
         method: "GET",
         headers: {

@@ -2,7 +2,7 @@ import "./HistoricItemStyle.css"
 
 export const HistoricItem = ({ prediction }) => {
 
-    const backendUrl = "http://localhost:3000"; 
+    const backendUrl = import.meta.env.VITE_API_URL; 
     
     const rawPath = prediction.image.filePath;
 
