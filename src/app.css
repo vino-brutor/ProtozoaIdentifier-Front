@@ -19,6 +19,12 @@
     font-size: 80px;
 }
 
+.split-content-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
 .split-column {
     flex: 1;
     padding: 40px;
@@ -28,6 +34,7 @@
 }
 
 .input-side {
+    position: relative;
     background-color: #00171f;
 }
 
@@ -127,7 +134,7 @@
 }
 
 .result-card {
-    width: 700px;
+    width: 100%;
 }
 
 .result-card > p {
@@ -194,6 +201,18 @@
     font-weight: bold;
 }
 
+.historic-menu-btn {
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 30px;
+    color: #dbdbdb;
+    position: absolute; 
+    top: 20px;          
+    left: 20px;        
+    cursor: pointer;    
+    z-index: 10;        
+}
+
 .historic-menu-container {
     position: fixed;
     top: 0;
@@ -201,21 +220,81 @@
     height: 100vh;
     width: 450px;
     background-color: #dbdbdb;
-    overflow-y: auto; /*permite scrollar pela view se necessário*/
+    overflow-y: auto;
     z-index: 100;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%); 
+    transition: transform 0.3s ease-in-out; 
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2); 
+}
+
+.historic-menu-container.open {
+    transform: translateX(0);
 }
 
 .exit-historic-btn {
-    position: absolute;
-    top: 16px;
-    right: 16px;
+    align-self: flex-end; 
+    margin: 16px;
+    margin-bottom: 8px;
     background: transparent;
-    font-size: 14px;
+    border: none; 
+    font-size: 24px;
     cursor: pointer;
     color: #007ea7;
+    font-weight: bold;
 }
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .split-content-wrapper {
+        flex-direction: column;
+    }
+
+    .split-column {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .inputs-div {
+        padding: 40px 20px; 
+        width: 100%;
+    }
+
+    .protozoaIdentifier-Title {
+        font-size: 40px; 
+        margin-top: 40px; 
+    }
+
+    .imagePreview {
+        width: 100%; 
+        height: auto; 
+        max-height: 400px; 
+        border-width: 3px; 
+    }
+
+    .result-card, .preview-card {
+        width: 100%; 
+    }
+
+    #uploadBtn, 
+    .disabled-label, 
+    .file-label {
+        width: 100%; 
+        font-size: 18px;
+    }
+
+    .historic-menu-container {
+        width: 100%; 
+    }
 }

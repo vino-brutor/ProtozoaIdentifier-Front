@@ -165,7 +165,6 @@ function App() {
       )}
       <div
         className={`split-content-wrapper ${!user ? "blurred-effect" : ""}`}
-        style={{ display: "flex", width: "100%", height: "100%" }}
       >
         <div className="input-side split-column">
           <button
@@ -175,18 +174,18 @@ function App() {
             ☰
           </button>
 
-          {isMenuOpen && (
-            <div className="historic-menu-container">
-              <button className="exit-historic-btn" onClick={() => setIsMenuOpen(false)}>
-                X
-              </button>
-              {
-                historic.map((item) => {
-                  return <HistoricItem key={item.id} prediction={item} />;
-                })
-              }
-            </div>
-          )}
+          
+          <div className={`historic-menu-container ${isMenuOpen ? "open" : ""}`}>
+            <button className="exit-historic-btn" onClick={() => setIsMenuOpen(false)}>
+              X
+            </button>
+            {
+              historic.map((item) => {
+                return <HistoricItem key={item.id} prediction={item} />;
+              })
+            }
+          </div>
+          
 
           <h1 className="protozoaIdentifier-Title">Protozoa Identifer</h1>
           <div className="inputs-div">

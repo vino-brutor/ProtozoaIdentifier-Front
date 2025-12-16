@@ -2,6 +2,14 @@ import "./HistoricItemStyle.css"
 
 export const HistoricItem = ({ prediction }) => {
 
+    const backendUrl = "http://localhost:3000"; 
+    
+    const rawPath = prediction.image.filePath;
+
+    const fileName = rawPath.split(/[/\\]/).pop();
+
+    const fullImageUrl = `${backendUrl}/uploads/${fileName}`;
+
     let percentage = (prediction.confidence * 100).toFixed(1) // to fixed colcoa o numero maximo de casa decimais
 
     let color = "#ff2400"
@@ -22,7 +30,7 @@ export const HistoricItem = ({ prediction }) => {
                 </span>
                 <span className="confidence-badge" style={{backgroundColor: `${color}`}}>{percentage}%</span>
             </div>
-            <img className="historic-image" src={prediction.image.filePath} alt={prediction.className} />
+            <img className="historic-image" src={fullImageUrl} alt={prediction.className} />
         </div>
     )
 }
