@@ -187,7 +187,7 @@ function App() {
           </div>
           
 
-          <h1 className="protozoaIdentifier-Title">Protozoa Identifer</h1>
+          <h1 className="protozoaIdentifier-Title">Protozoa Identifier</h1>
           <div className="inputs-div">
             <p>Send a protozoa image and click on the send button</p>
             <div className="custom-input-group">
