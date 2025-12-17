@@ -220,8 +220,13 @@ function App() {
         <div className="output-side split-column">
           {isLoading ? (
             <div className="loading-Card">
-              <h2>Processing image...</h2>
-              <p>This will take a few seconds</p>
+              <div>
+                <h2>Processing image...</h2>
+                <p>This will take a few seconds</p>
+              </div>
+              <div>
+                <span class="loader"></span>
+              </div>
             </div>
           ) : result ? (
             <div className="result-card">
