@@ -16,6 +16,7 @@ function App() {
 
   const handleGoogleSucess = async (credentialResponse) => {
     try {
+      setIsLoading(true)
       const res = await fetch(`${import.meta.env.VITE_API_URL}/api/google-login`, {
         method: "POST",
         headers: {
@@ -34,6 +35,8 @@ function App() {
       localStorage.setItem("protzoa_token", data.token);
     } catch (error) {
       alert("Error while logging in: " + error.message);
+    } finally {
+      setIsLoading(false)
     }
   };
 
@@ -161,7 +164,12 @@ function App() {
 
             <p className="free-text-login-card">It's free!</p>
           </div>
-        </div>
+          {isLoading && (
+            <div>
+                <span class="loader"></span>
+              </div>
+          )}
+          </div>
       )}
       <div
         className={`split-content-wrapper ${!user ? "blurred-effect" : ""}`}
@@ -218,7 +226,7 @@ function App() {
         </div>
 
         <div className="output-side split-column">
-          {isLoading ? (
+          {isLoading && user ? (
             <div className="loading-Card">
               <div>
                 <h2>Processing image...</h2>
