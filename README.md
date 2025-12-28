@@ -43,12 +43,13 @@ Antes de começar, você precisará ter instalado em sua máquina o [Node.js](ht
 1. **Clone o repositório**
    ```bash
    git clone [https://github.com/SEU-USUARIO/NOME-DO-REPO-FRONTEND.git](https://github.com/vino-brutor/ProtozoaIdentifier-Front)
-Acesse a pasta do projeto
+
+2. **Acesse a pasta do projeto**
 
 Bash
 
-cd NOME-DO-REPO-FRONTEND
-Instale as dependências
+cd ProtozoaIdentifier-Front
+3. **Instale as dependências**
 
 Bash
 
@@ -59,9 +60,9 @@ Snippet de código
 
 VITE_API_URL=http://localhost:3000
 VITE_GOOGLE_CLIENT_ID=SEU_CLIENT_ID_DO_GOOGLE_CLOUD
-Execute o projeto
+4. **Execute o projeto**
 
 Bash
 
 npm run dev
-O projeto estará rodando em http://localhost:5173
+**O projeto estará rodando em http://localhost:5173**
