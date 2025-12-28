@@ -49,6 +49,7 @@ Antes de começar, você precisará ter instalado em sua máquina o [Node.js](ht
 Bash
 
 cd ProtozoaIdentifier-Front
+
 3. **Instale as dependências**
 
 Bash
@@ -60,9 +61,11 @@ Snippet de código
 
 VITE_API_URL=http://localhost:3000
 VITE_GOOGLE_CLIENT_ID=SEU_CLIENT_ID_DO_GOOGLE_CLOUD
+
 4. **Execute o projeto**
 
 Bash
 
 npm run dev
+
 **O projeto estará rodando em http://localhost:5173**
