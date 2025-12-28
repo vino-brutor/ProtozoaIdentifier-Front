@@ -1,16 +1,67 @@
-# React + Vite
+# 🦠 Protozoa Identifier (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 💻 Sobre o projeto
 
-Currently, two official plugins are available:
+O **Protozoa Identifier** é uma aplicação web Fullstack desenvolvida para auxiliar na identificação de protozoários através de imagens. O sistema utiliza Inteligência Artificial para analisar o upload do usuário e retornar a classificação do organismo com uma taxa de confiança.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este repositório contém o **Frontend** da aplicação, construído com React e Vite, focado em uma interface responsiva, intuitiva e com autenticação via Google.
 
-## React Compiler
+🔗 **Acesse o projeto online:** https://protozoa-identifier-front.vercel.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ⚙️ Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-   ✅ **Upload de Imagens:** Envio de arquivos de imagem para análise.
+-   🤖 **Integração com IA:** Exibição do resultado da predição (Nome do protozoário + Porcentagem de confiança).
+-   🔐 **Autenticação:** Login seguro via Google (OAuth 2.0).
+-   📜 **Histórico:** Salvamento automático das análises realizadas pelo usuário logado.
+-   📱 **Responsividade:** Layout adaptável para Desktop, Tablets e Celulares.
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+O projeto foi desenvolvido utilizando as seguintes tecnologias:
+
+-   **[React](https://reactjs.org/)** + **[Vite](https://vitejs.dev/)**
+-   **CSS3** (Estilização responsiva e customizada)
+-   **[Google OAuth](https://www.npmjs.com/package/@react-oauth/google)** (Autenticação)
+-   **Fetch API** (Comunicação com o Backend)
+
+> O Backend deste projeto (Node.js + Python/TensorFlow + Prisma) pode ser encontrado neste repositório: [LINK DO SEU REPO BACKEND AQUI]
+
+---
+
+## 🚀 Como executar o projeto localmente
+
+### Pré-requisitos
+Antes de começar, você precisará ter instalado em sua máquina o [Node.js](https://nodejs.org/en/).
+
+### Passo a passo
+
+1. **Clone o repositório**
+   ```bash
+   git clone [https://github.com/SEU-USUARIO/NOME-DO-REPO-FRONTEND.git](https://github.com/vino-brutor/ProtozoaIdentifier-Front)
+Acesse a pasta do projeto
+
+Bash
+
+cd NOME-DO-REPO-FRONTEND
+Instale as dependências
+
+Bash
+
+npm install
+Configure as Variáveis de Ambiente Crie um arquivo .env na raiz do projeto e adicione as chaves necessárias (exemplo abaixo):
+
+Snippet de código
+
+VITE_API_URL=http://localhost:3000
+VITE_GOOGLE_CLIENT_ID=SEU_CLIENT_ID_DO_GOOGLE_CLOUD
+Execute o projeto
+
+Bash
+
+npm run dev
+O projeto estará rodando em http://localhost:5173
