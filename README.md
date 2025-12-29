@@ -41,9 +41,9 @@ Antes de começar, você precisará ter instalado em sua máquina o [Node.js](ht
 ### Passo a passo
 
 1. **Clone o repositório**
-   ```bash
-   git clone [https://github.com/SEU-USUARIO/NOME-DO-REPO-FRONTEND.git](https://github.com/vino-brutor/ProtozoaIdentifier-Front)
-
+```bash
+git clone [https://github.com/SEU-USUARIO/NOME-DO-REPO-FRONTEND.git](https://github.com/vino-brutor/ProtozoaIdentifier-Front)
+```
 2. **Acesse a pasta do projeto**
 
 ```Bash
@@ -57,10 +57,11 @@ npm install
 ```
 Configure as Variáveis de Ambiente Crie um arquivo .env na raiz do projeto e adicione as chaves necessárias (exemplo abaixo):
 
-VITE_API_URL=http://localhost:3000
+```
+VITE_API_URL=http://localhost:5173
 
 VITE_GOOGLE_CLIENT_ID=SEU_CLIENT_ID_DO_GOOGLE_CLOUD
-
+```
 4. **Execute o projeto**
 
 ```Bash
