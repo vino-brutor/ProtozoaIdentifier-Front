@@ -46,15 +46,15 @@ Antes de começar, você precisará ter instalado em sua máquina o [Node.js](ht
 
 2. **Acesse a pasta do projeto**
 
-Bash
+```Bash
 
 cd ProtozoaIdentifier-Front
-
+```
 3. **Instale as dependências**
 
-Bash
-
+ ```bash 
 npm install
+```
 Configure as Variáveis de Ambiente Crie um arquivo .env na raiz do projeto e adicione as chaves necessárias (exemplo abaixo):
 
 Snippet de código
@@ -64,8 +64,8 @@ VITE_GOOGLE_CLIENT_ID=SEU_CLIENT_ID_DO_GOOGLE_CLOUD
 
 4. **Execute o projeto**
 
-Bash
+```Bash
 
 npm run dev
-
+```
 **O projeto estará rodando em http://localhost:5173**
