@@ -29,7 +29,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 -   **[Google OAuth](https://www.npmjs.com/package/@react-oauth/google)** (Autenticação)
 -   **Fetch API** (Comunicação com o Backend)
 
-> O Backend deste projeto (Node.js + Python/TensorFlow + Prisma) pode ser encontrado neste repositório: [LINK DO SEU REPO BACKEND AQUI]
+> O Backend deste projeto (Node.js + Python/TensorFlow + Prisma) pode ser encontrado neste repositório: https://github.com/vino-brutor/protozoaIdentifier-Back
 
 ---
 
