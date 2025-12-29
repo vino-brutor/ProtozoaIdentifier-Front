@@ -57,9 +57,8 @@ npm install
 ```
 Configure as Variáveis de Ambiente Crie um arquivo .env na raiz do projeto e adicione as chaves necessárias (exemplo abaixo):
 
-Snippet de código
-
 VITE_API_URL=http://localhost:3000
+
 VITE_GOOGLE_CLIENT_ID=SEU_CLIENT_ID_DO_GOOGLE_CLOUD
 
 4. **Execute o projeto**
